@@ -592,6 +592,7 @@ hr {
 }
 
 /* TEAM */
+/*
 
 team {
     display: flex;
@@ -649,6 +650,7 @@ team {
     transform: translate3d(0, -50%, 0);
     opacity: 0;
 }
+*/
 
 .team__prof {
     text-transform: uppercase;
