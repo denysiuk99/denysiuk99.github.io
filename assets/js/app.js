@@ -30,7 +30,7 @@ $(function () {
             blockId = $this.data('scroll'),
             blockOffset = $(blockId).offset().top;
 
-        $('#nav a').removeClass("active");
+        $('#nav a').removeClass('active');
         $this.addClass('active');
 
         $('html, body').animate({
@@ -47,6 +47,12 @@ $(function () {
         $(this).toggleClass('active');
 
         $('#nav').toggleClass('active');
+
+        $('#nav').on('click', function (event) {
+            event.preventDefault();
+            $('#nav_toggle').removeClass('active');
+            $('#nav').removeClass('active');
+        })
     });
 
     /* Collapse */
@@ -54,8 +60,7 @@ $(function () {
     $('[data-collapse]').on('click', function (event) {
         event.preventDefault();
 
-        let $this = $(this),
-            blockId = $this.data('collapse');
+        let $this = $(this), blockId = $this.data('collapse');
         $this.toggleClass('active');
     });
 
