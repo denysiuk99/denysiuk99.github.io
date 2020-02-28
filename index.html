@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&display=swap&subset=cyrillic-ext"
           rel="stylesheet">
     <script src="https://kit.fontawesome.com/676077fd2e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <title>iTee my website</title>
 </head>
 
@@ -18,7 +19,7 @@
 <header class="header active" id="header">
     <div class="container">
         <div class="header__inner">
-            <div class="logo">iTee</div>
+            <div class="logo" data-scroll="#intro">iTee</div>
             <nav class="nav" id="nav">
                 <a href="#" class="nav__link" data-scroll="#about">About</a>
                 <a href="#" class="nav__link" data-scroll="#products">Products</a>
@@ -127,7 +128,7 @@
     </div>
 </div>
 
-<section class="section"  id="products">
+<section class="section" id="products">
     <div class="container">
         <div class="section__header">
             <h3 class="section__suptitle">Text here...</h3>
@@ -219,21 +220,21 @@
             </div>
             <div class="todo__item">
                 <div class="accordion">
-                    <div class="accordion__item">
+                    <div class="accordion__item" data-collapse="#acc_1">
                         <div class="accordion__header">
                             <div class="accordion__icon">
                                 <i class="material-icons">picture_in_picture</i>
                             </div>
                             <div class="accordion__title">Title Here..</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="acc_1">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium odit, magni qui
                                 porro eaque, vel exercitationem culpa libero, dolore quis fuga cum laudantium nulla
                                 repudiandae reprehenderit rem necessitatibus eos consequuntur doloribus odio doloremque!
                                 Odio commodi, voluptate, repudiandae dolore in excepturi.</p>
                         </div>
                     </div>
-                    <div class="accordion__item active">
+                    <div class="accordion__item" data-collapse="#acc_2">
                         <div class="accordion__header">
                             <div class="accordion__icon">
                                 <i class="material-icons">
@@ -242,14 +243,14 @@
                             </div>
                             <div class="accordion__title">Title Here..</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="acc_2">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium odit, magni qui
                                 porro eaque, vel exercitationem culpa libero, dolore quis fuga cum laudantium nulla
                                 repudiandae reprehenderit rem necessitatibus eos consequuntur doloribus odio doloremque!
                                 Odio commodi, voluptate, repudiandae dolore in excepturi.</p>
                         </div>
                     </div>
-                    <div class="accordion__item">
+                    <div class="accordion__item" data-collapse="#acc_3">
                         <div class="accordion__header">
                             <div class="accordion__icon">
                                 <i class="material-icons">
@@ -258,7 +259,7 @@
                             </div>
                             <div class="accordion__title">Title Here..</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="acc_3">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium odit, magni qui
                                 porro eaque, vel exercitationem culpa libero, dolore quis fuga cum laudantium nulla
                                 repudiandae reprehenderit rem necessitatibus eos consequuntur doloribus odio doloremque!
@@ -275,15 +276,27 @@
 <section class="section section--gray">
     <div class="container">
         <div class="reviews">
-            <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
-            <a class="reviews__btn reviews__btn--next" href="#">Next</a>
-            <div class="reviews__item">
-                <img class="reviews__photo" src="http://placehold.it/145" alt="">
-                <div class="reviews__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod sint quae veritatis eligendi
-                    necessitatibus consequuntur doloremque reprehenderit corporis quibusdam doloribus.
+            <div data-slider>
+                <div class="reviews__item">
+                    <div>
+                        <img class="reviews__photo" src="http://placehold.it/145" alt="">
+                        <div class="reviews__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod sint quae veritatis eligendi
+                            necessitatibus consequuntur doloremque reprehenderit corporis quibusdam doloribus.
+                        </div>
+                        <div class="reviews__author">Lorem ipsum.</div>
+                    </div>
                 </div>
-                <div class="reviews__author">Lorem ipsum.</div>
+                <div class="reviews__item">
+                    <div>
+                        <img class="reviews__photo" src="http://placehold.it/145" alt="">
+                        <div class="reviews__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod sint quae veritatis eligendi
+                            necessitatibus consequuntur doloremque reprehenderit corporis quibusdam doloribus.
+                        </div>
+                        <div class="reviews__author">Lorem ipsum.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -404,7 +417,7 @@
 </section>
 
 
-<section class="section"  id="blog">
+<section class="section" id="blog">
     <div class="container">
         <div class="section__header">
             <h3 class="section__suptitle">Our Stories...</h3>
@@ -532,6 +545,7 @@
                     <button class="subscribe__button" type="submit">Subscribe</button>
                 </form>
             </div>
+
             <div class="footer__col footer__col__2">
                 <div class="footer__title">Blogs</div>
                 <div class="blogs">
@@ -565,12 +579,12 @@
 
         <div class="copyright">
             © 2020 Copyright: <span> iTee.com </span>
-
         </div>
     </div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 
