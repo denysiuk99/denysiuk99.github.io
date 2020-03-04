@@ -42,6 +42,18 @@ p {
     z-index: 1000;
 }
 
+.header.fixed {
+    height: auto;
+    position: fixed;
+    background-color: #31344e;
+}
+
+.header.fixed .header__inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 0;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -49,7 +61,6 @@ p {
     border-bottom: 2px solid #515369;
     padding: 35px 0;
 }
-
 
 /* NAV
 =========================*/
@@ -354,6 +365,17 @@ p {
     background-color: #53354a;
 }
 
+
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
@@ -398,9 +420,47 @@ p {
     text-transform: uppercase;
 }
 
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
 
-/* Download
-===================*/
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    opacity: 0.5;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+    /* Download
+    ===================*/
 
 .download {
     margin: 90px 0;
@@ -542,6 +602,21 @@ p {
     /* NAV */
     .nav {
         display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        background-color: #31344e;
+        text-align: right;
+        top: 100%;
+        right: 0;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        padding: 9px 15px;
     }
 
     /* Burger */
