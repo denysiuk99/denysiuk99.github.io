@@ -86,9 +86,6 @@ h6 {
     z-index: 1000;
 }
 
-.header:active {
-    background-color: #70a5e7;
-}
 .header.fixed {
     padding: 10px 0;
     background-color: #70a5e7;
@@ -519,8 +516,6 @@ hr {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-
-
 }
 
 .todo__item {
